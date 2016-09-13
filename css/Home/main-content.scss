@@ -1,0 +1,130 @@
+
+
+@import 'mixins.scss';
+@import 'variables.scss';
+
+@function ser-wrap-bg($bg) {
+    @if (lightness($bg) > 50) {
+      @return #F2F2F2; // Lighter backgorund, return dark color
+    } @else {
+      @return false; // Darker background, return light color
+    }
+  }
+.services-wrap {
+  background:ser-wrap-bg(#fff);
+  padding:30px 0 50px 0;
+}
+
+.main-head-wrap {
+  padding:0;
+  margin:0 auto;
+  max-width: 1200px;
+  width: 100%;  
+}
+
+.all-services {
+  color:#0C0C0C;
+  position: relative;
+  z-index: 1000;
+  padding:0;
+  text-align: center; 
+  overflow: hidden;
+  font-weight: 300;
+    font-family:$font-main; 
+
+    h2{
+       @extend %headlines;
+      padding:20px 0;
+      text-align:center;
+      @include breakpoint(medium_screen1) {
+        text-align: center;
+      }
+      span {
+        background:#F2F2F2;
+      }
+    }
+    div {
+      border-bottom:0;
+      overflow: hidden;
+      margin-top: 30px;
+      background:transparent;
+      &:nth-of-type(1){
+        h3 {
+         @include services;
+          &:before{
+            content:url(../img/1.png);
+            position:absolute;
+            left:20px;
+            top:20px;
+          }
+        }
+      }
+      &:nth-of-type(2){
+         h3 {
+          @include services;
+          &:before{
+            content:url(../img/2.png);
+            position:absolute;
+            left:20px;
+            top:20px;
+          }
+      }
+    }
+      &:nth-of-type(3){
+         h3 {
+          @include services;
+          &:before{
+            content:url(../img/3.png);
+            position:absolute;
+            left:20px;
+            top:20px;
+          }
+      }
+    }
+      &:nth-of-type(5){
+         h3 {
+          @include services;
+          &:before{
+            content:url(../img/4.png);
+            position:absolute;
+            left:20px;
+            top:20px;
+          }
+      }
+    }
+      &:nth-of-type(6){
+         h3 {
+          @include services;
+          &:before{
+            content:url(../img/5.png);
+            position:absolute;
+            left:20px;
+            top:20px;
+          }
+      }
+    }
+      &:nth-of-type(7){
+         h3 {
+          @include services;
+          &:before{
+            content:url(../img/6.png);
+            position:absolute;
+            left:20px;
+            top:20px;
+          }
+      }
+    }
+    h3 {
+       @extend %headlines;
+      font-size: 1.1em;
+      line-height: 20px;
+      margin:10px 0;
+      }
+      a {
+        margin:40px auto;
+        &:hover {
+          background:#0D0D0D;
+        }
+      }
+  }
+}

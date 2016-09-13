@@ -1,0 +1,80 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+.car-bg {
+  margin-top: 70px;
+  padding:0 !important;
+}
+
+.technology {
+  position: relative;
+  div {
+    padding:0;
+  }
+  img {
+    width: 100%;
+    min-width: 40px;
+   max-width:436px;
+   float: right;
+    @include breakpoint(medium_screen1){
+      min-width: 200px;
+      max-width:200px;
+      display: block;
+      margin:30px auto 0 auto;
+      float: none;
+     }
+  }
+}
+.call-wrap {
+    padding:0;
+    padding-bottom: 50px;
+  }
+.call {
+  max-width:500px;
+ padding-left:50px;
+ margin-top:120px;
+ @include breakpoint(medium_screen1){
+      padding:0;
+      width: 250px;
+      margin:0 auto;
+     }
+  h2 {
+     @extend %headlines;
+    margin-top: 0;
+    padding:50px 0;
+    color: #161616;
+    @include breakpoint(medium_screen1){
+       text-align:center;
+     }
+      span {
+         @include breakpoint(medium_screen1){
+          padding:0 20px;
+        }
+      }
+  }
+  p {
+    text-align: left;
+    color: #161616;
+    font-size: 1.3em;
+    padding:0;
+    font-family: $font-main;
+    @include breakpoint(medium_screen1){
+       text-align:center;
+     }
+    span {
+      display: block;
+      padding:10px 0;
+    }
+   }
+   a {
+    @include buttons;
+    color: $main-blue;
+    margin:0;
+    &:hover {
+      background:$main-blue;
+      color: #fff;
+     }
+     @include breakpoint(medium_screen1){
+       margin:20px auto;
+     }
+   }
+}

@@ -1,0 +1,21 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+
+.quick-wrap {
+  padding:60px 0;
+  overflow: hidden;
+    background: url(../img/contact-bg-middle.jpg) no-repeat center center;
+  @include background_stretch;
+  text-align:center;
+  h3 {
+    @extend %headlines;
+    background: transparent;
+    color: $main-blue;
+    padding:30px 0;
+  }
+  p {
+    @include buttons;
+    color: #fff;
+  }
+}

@@ -1,0 +1,43 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+.contact-wrap-bg {
+  margin-top: 0 !important;
+  background:#40474D;
+  padding:20px 0;
+  overflow: hidden;
+  font-family: $font-main;
+}
+
+.testimonials {
+  text-align:center;
+  padding-top:30px;
+  div {
+    display: table;
+    width: 300px;
+    margin: 30px auto;
+    a {
+      display: table-cell;
+      &:nth-of-type(1){
+        padding:30px;
+        background: url(../img/twitter.png) no-repeat center center;
+      }
+      &:nth-of-type(2){
+        padding:30px;
+        background: url(../img/facebook.png) no-repeat center center;
+      }
+      &:nth-of-type(3){
+        padding:30px;
+        background: url(../img/google-plus.png) no-repeat center center;
+      }
+    }
+  }
+  h2 {
+     @extend %headlines;
+    margin-top: 60px;
+    font-size: 2em;
+  }
+  p {
+    color: #fff;
+    padding:40px 0 20px 0;
+  }
+}

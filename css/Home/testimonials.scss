@@ -1,0 +1,66 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+.quote {
+    color: rgba(0,0,0,.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+#carousel {
+  margin:50px 0 0 0;
+  padding-bottom:30px;
+  background:rgb(242,242,242);
+  h2 {
+     @extend %headlines;
+    padding:20px 0;
+    text-align:center;
+      span {
+        padding:0 20px 0 0;
+         @include breakpoint(medium_screen1){
+          padding:0 20px;
+      }
+    }
+  }
+}
+#fade-quote-carousel{
+    padding:0 0 40px 0;
+    .carousel {
+      padding-bottom: 60px;
+    }
+    .item {
+      opacity: 0;
+      @include opacity;
+      img {
+        display: block;
+        margin:15px auto;
+        }
+      }
+    .active {
+      opacity: 1;
+      @include opacity;
+      }
+    .carousel-indicators {
+      bottom: -10px;
+      > li {
+        background-color: $main-blue;
+        border: none;
+      }
+    }
+    blockquote {
+        text-align: center;
+        border: none;
+        p {
+          font-family: $font-main;
+          font-style: italic;
+        }
+    }
+    .profile-circle {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        border-radius: 100px;
+    }
+  }
+
+.quote {
+  margin-top: 0;
+}

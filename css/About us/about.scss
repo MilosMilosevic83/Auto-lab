@@ -1,0 +1,127 @@
+@import '../Home/mixins.scss';
+@import '../Home/variables.scss';
+
+.main-about-wrapper {
+
+.main-content-wrap {
+  padding:0;
+  img {
+    width:100%;
+    @include breakpoint(medium_screen1){
+      margin-top:20px;
+    }
+  }
+}
+
+.about-me {
+    padding: 20px 0 0 0;
+    font-family: $font-main;
+    h2 {
+      @include headlines2;
+    }
+    @include breakpoint(medium_screen1){
+      padding: 0;
+      margin-top:0;
+    }
+    div {
+      margin-bottom: 50px;
+      padding:0;
+
+      
+      p {
+        @extend %paragraph;
+        text-align: left !important;
+      }
+    }
+  }
+
+.about-us-txt {
+  float: none;
+  display: block;
+  clear: both;
+ color: rgb(150,153,151);
+ padding:30px 0;
+ }
+.headline-wrapper {
+  color:#fff;
+  position: relative;
+  z-index: 1000;
+
+  text-align: left; 
+  font-family:$font-main; 
+  padding:15px;
+  h2 {
+      @include headlines2;
+      color: #161616;
+      font-size: 2em;
+    }
+    p {
+      @extend %paragraph;
+      text-align:left !important;
+    }
+  }
+   /*STAFF
+=================================================================================
+================================================================================= */
+.clear {
+  width: 100%;
+  clear: both;
+}
+.staff-wrapper {
+  h2 {
+    @include headlines2;
+  }
+}
+.service-headline {
+
+      text-align:left;
+        padding:20px 0;
+        margin-bottom:30px;
+         h2 {
+      margin: 0;
+      font-size: 1.8em;
+      font-weight: 300;
+      color:#161616;
+      text-align: left;
+      padding:15px 30px 30px 30px;
+      position:relative;
+
+      font-family:$font-main;
+      }
+      p {
+        @extend %paragraph;
+      }
+    }
+@mixin inner-cells{
+    padding:30px;
+}
+.services-cells {
+  padding:10px 0;
+
+  img {
+    width: 100%;
+    max-width: 150px;
+    display: block;
+    margin:0 auto;
+  }
+  h3 {
+        color: #353535;
+        border-bottom:#E55151;
+        clear: both;
+        font-weight: 300;
+        font-size: 1.4em;
+        text-align:center;
+         @include breakpoint(medium_screen1){
+          font-size: 1.2em;
+         }
+      }
+  p {
+        @extend %paragraph;
+      @include breakpoint(medium_screen1){
+        width: 100%;
+      }
+    }
+  }
+
+
+}
